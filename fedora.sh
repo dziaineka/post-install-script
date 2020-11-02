@@ -57,7 +57,7 @@ sudo dnf check-update -yq
 
 # iterate through packages and installs them if not already installed
 for package_name in ${PACKAGE_LIST[@]}; do
-	if ! sudo dnf list --installed | grep -q ^$package_name; then
+	if ! sudo dnf list --installed | grep -q "^\<$package_name\>"; then
 		sudo dnf install "$package_name" -yq
 	else
 		echo "$package_name already installed"
@@ -65,7 +65,7 @@ for package_name in ${PACKAGE_LIST[@]}; do
 done
 
 for flatpak_name in ${FLATPAK_LIST[@]}; do
-	if ! flatpak list | grep -q ^$flatpak_name; then
+	if ! flatpak list | grep -q $flatpak_name; then
 		flatpak install "$flatpak_name" -y
 	else
 		echo "$package_name already installed"
