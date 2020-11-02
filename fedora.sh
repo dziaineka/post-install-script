@@ -58,7 +58,10 @@ sudo dnf check-update -yq
 # iterate through packages and installs them if not already installed
 for package_name in ${PACKAGE_LIST[@]}; do
 	if ! sudo dnf list --installed | grep -q "^\<$package_name\>"; then
+		echo "installing $package_name..."
+		sleep .5
 		sudo dnf install "$package_name" -yq
+		echo "$package_name installed"
 	else
 		echo "$package_name already installed"
 	fi
