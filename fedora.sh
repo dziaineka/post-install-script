@@ -11,6 +11,8 @@ PACKAGE_LIST=(
 	geary
 	hydrapaper
 	code
+	gnome-extensions-app
+	gnome-tweaks
 )
 
 FLATPAK_LIST=(
@@ -18,7 +20,6 @@ FLATPAK_LIST=(
 	info.febvre.Komikku
 	org.glimpse_editor.Glimpse
 	org.gnome.Podcasts
-	org.gnome.gitlab.somas.Apostrophe
 )
 
 # gnome settings
