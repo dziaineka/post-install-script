@@ -22,6 +22,9 @@ FLATPAK_LIST=(
 	org.gnome.Podcasts
 )
 
+# undo vim bind to vi
+unalias vim
+
 # gnome settings
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
 gsettings set org.gnome.desktop.interface clock-format 12h
