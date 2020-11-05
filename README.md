@@ -1,4 +1,4 @@
-# Fedora Post Install script
+# Fedora Post Install Script
 
 shell script for personal use, setting up fedora the way i like it.
 
@@ -6,7 +6,7 @@ shell script for personal use, setting up fedora the way i like it.
 ```bash
 git clone https://github.com/fhek789/fedora-postinstall.git
 cd fedora-postinstall
-chmod +x fedora.sh
+chmod +x *.sh
 ./fedora.sh
 ```
 
