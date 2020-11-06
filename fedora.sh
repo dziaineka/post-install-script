@@ -32,6 +32,10 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 # install software
 ./software.sh
 
+# disable services
+sudo systemctl disable NetworkManager-wait-online.service
+sudo systemctl disable lvm2-monitor.service
+
 # upgrade packages
 sudo dnf upgrade -yq
 sudo dnf autoremove -yq
