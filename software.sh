@@ -47,7 +47,7 @@ for flatpak_name in ${FLATPAK_LIST[@]}; do
 	if ! flatpak list | grep -q $flatpak_name; then
 		echo "installing $flatpak_name..."
 		sleep .5
-		flatpak install "$flatpak_name" -y
+		flatpak install "$flatpak_name" -y --noninteractive
 		echo "[INSTALLED] - $flatpak_name"
 	else
 		echo "[INSTALLED] - $flatpak_name"
