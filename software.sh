@@ -47,6 +47,6 @@ for flatpak_name in ${FLATPAK_LIST[@]}; do
 	if ! flatpak list | grep -q $flatpak_name; then
 		flatpak install "$flatpak_name" -y
 	else
-		echo "$package_name already installed"
+		echo "$flatpak_name already installed"
 	fi
 done
