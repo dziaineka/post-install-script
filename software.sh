@@ -37,9 +37,9 @@ for package_name in ${PACKAGE_LIST[@]}; do
 		echo "installing $package_name..."
 		sleep .5
 		sudo dnf install "$package_name" -yq
-		echo "$package_name installed"
+		echo "[INSTALLED] - $package_name"
 	else
-		echo "$package_name already installed"
+		echo "[INSTALLED] - $package_name"
 	fi
 done
 
@@ -48,8 +48,8 @@ for flatpak_name in ${FLATPAK_LIST[@]}; do
 		echo "installing $flatpak_name"
 		sleep .5
 		flatpak install "$flatpak_name" -y
-		"echo $flatpak_name installed"
+		echo "[INSTALLED] - $flatpak_name"
 	else
-		echo "$flatpak_name already installed"
+		echo "[INSTALLED] - $flatpak_name"
 	fi
 done
