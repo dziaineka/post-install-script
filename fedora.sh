@@ -39,6 +39,3 @@ sudo systemctl disable lvm2-monitor.service
 # upgrade packages
 sudo dnf upgrade -yq
 sudo dnf autoremove -yq
-
-# notification when script ends
-notify-send "Everything went fine!" "Post install script successfully ended" -i checkbox-checked-symbolic
