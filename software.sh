@@ -1,16 +1,11 @@
 #!/usr/bin/env bash
 
 PACKAGE_LIST=(
-	vim
 	tilix
 	zsh
 	fira-code-fonts
-	lutris
-	akmod-nvidia
-	steam
 	geary
 	hydrapaper
-	code
 	gnome-extensions-app
 	gnome-tweaks
 )
@@ -18,8 +13,9 @@ PACKAGE_LIST=(
 FLATPAK_LIST=(
 	com.spotify.Client
 	info.febvre.Komikku
-	org.glimpse_editor.Glimpse
 	org.gnome.Podcasts
+	org.gnome.Builder
+	com.discordapp.Discord
 )
 
 # add third party software
