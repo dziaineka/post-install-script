@@ -9,6 +9,9 @@ gsettings set org.gnome.desktop.interface clock-format 12h
 gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
 gsettings set org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
 
+# change mouse profile to flat
+gsettings set org.gnome.desktop.peripherals.mouse accel-profile flat
+
 # disable background logo extension
 gnome-extensions disable background-logo@fedorahosted.org
 
