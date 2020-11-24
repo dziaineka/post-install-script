@@ -11,6 +11,14 @@ PACKAGE_LIST=(
 	gnome-builder
 )
 
+REMOVE_LIST=(
+        libreoffice-calc
+        libreoffice-impress
+        cheese
+        gnome-maps
+        rhythmbox
+)
+
 FLATPAK_LIST=(
 	com.spotify.Client
 	info.febvre.Komikku
@@ -27,6 +35,12 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc --quiet
 sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 
 sudo dnf check-update -yq
+
+for package_name in ${REMOVE_LIST[@]}; do
+        echo "removing $package_name..."
+        sleep .5
+        sudo dnf remove "$package_name" -yq
+done
 
 for package_name in ${PACKAGE_LIST[@]}; do
 	if ! sudo dnf list --installed | grep -q "^\<$package_name\>"; then
