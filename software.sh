@@ -1,20 +1,24 @@
 #!/usr/bin/env bash
 
 PACKAGE_LIST=(
-	tilix
+	alacritty
 	zsh
 	fira-code-fonts
 	geary
 	hydrapaper
 	gnome-extensions-app
 	gnome-tweaks
+	gnome-builder
 )
 
 FLATPAK_LIST=(
 	com.spotify.Client
 	info.febvre.Komikku
 	org.gnome.Podcasts
-	org.gnome.Builder
+	com.github.tchx84.Flatseal
+	de.haeckerfelix.Fragments
+	org.glimpse_editor.Glimpse
+	com.uploadedlobster.peek
 	com.discordapp.Discord
 )
 
