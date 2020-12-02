@@ -1,32 +1,22 @@
 #!/usr/bin/env bash
 
 PACKAGE_LIST=(
-	alacritty
 	zsh
-	fira-code-fonts
-	geary
-	hydrapaper
-	gnome-extensions-app
-	gnome-tweaks
-	gnome-builder
+	libreoffice-writer
+	code
+	kate
+	htop
 )
 
 REMOVE_LIST=(
-        libreoffice-calc
-        libreoffice-impress
-        cheese
-        gnome-maps
-        rhythmbox
+        kwrite
+        kmail
+        kamoso
 )
 
 FLATPAK_LIST=(
 	com.spotify.Client
-	info.febvre.Komikku
-	org.gnome.Podcasts
-	com.github.tchx84.Flatseal
-	de.haeckerfelix.Fragments
-	org.glimpse_editor.Glimpse
-	com.uploadedlobster.peek
+	org.mozilla.Thunderbird
 	com.discordapp.Discord
 )
 
