@@ -26,3 +26,9 @@ sudo systemctl disable ModemManager.service
 
 sudo dnf upgrade -yq
 sudo dnf autoremove -yq
+
+# run get-config script
+git clone https://github.com/fhek789/get-config.git
+cd get-config
+./init.sh
+
