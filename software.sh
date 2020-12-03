@@ -12,6 +12,22 @@ REMOVE_LIST=(
 	kwrite
 	kmail
 	kamoso
+	falkon
+	mediawriter
+	kolourpaint
+	kmines
+	kontact
+	krusader
+	konversation
+	kmahjongg
+	calligra
+	akregator
+	dragon
+	korganizer
+	kget
+	kaddressbook
+	juk
+	k3b
 )
 
 FLATPAK_LIST=(
