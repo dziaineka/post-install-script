@@ -20,7 +20,8 @@ REMOVE_LIST=(
 	krusader
 	konversation
 	kmahjongg
-	calligra
+	calligra-core
+	ktorrent
 	akregator
 	dragon
 	korganizer
@@ -28,6 +29,7 @@ REMOVE_LIST=(
 	kaddressbook
 	juk
 	k3b
+	kpat
 )
 
 FLATPAK_LIST=(
