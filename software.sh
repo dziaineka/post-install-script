@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PACKAGE_LIST=(
+INSTALL_LIST=(
 	zsh
 	libreoffice-writer
 	code
@@ -50,7 +50,7 @@ for package_name in ${REMOVE_LIST[@]}; do
 	sudo dnf remove "$package_name" -yq
 done
 
-for package_name in ${PACKAGE_LIST[@]}; do
+for package_name in ${INSTALL_LIST[@]}; do
 	if ! sudo dnf list --installed | grep -q "^\<$package_name\>"; then
 		echo "installing $package_name..."
 		sleep .5
