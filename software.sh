@@ -45,9 +45,14 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf check-update -yq
 
 for package_name in ${REMOVE_LIST[@]}; do
-	echo "removing $package_name..."
-	sleep .5
-	sudo dnf remove "$package_name" -yq
+	if ! sudo dnf list --installed | grep -q "^\<$package_name\>"; then
+		echo "[ALREADY UNINSTALLED] - $package_name"
+	else
+		echo "removing $package_name..."
+		sleep .5
+		sudo dnf remove "$package_name" -yq
+		echo [UNINSTALLED] - $package_name
+	fi
 done
 
 for package_name in ${INSTALL_LIST[@]}; do
