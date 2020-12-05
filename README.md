@@ -6,7 +6,6 @@ shell script for personal use, setting up fedora the way i like it.
 ```bash
 git clone https://github.com/fhek789/fedora-postinstall.git
 cd fedora-postinstall
-chmod +x *.sh
 ./fedora.sh
 ```
 
