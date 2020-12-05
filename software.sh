@@ -13,7 +13,7 @@ for package_name in ${REMOVE_LIST[@]}; do
 		echo "${RED}[UNINSTALLED]${RESTORE} - $package_name"
 	else
 		echo "removing $package_name..."
-		sleep .5
+		sleep 0.25
 		sudo dnf remove "$package_name" -yq
 		echo "${RED}[UNINSTALLED]${RESTORE} - $package_name"
 	fi
@@ -22,7 +22,7 @@ done
 for package_name in ${INSTALL_LIST[@]}; do
 	if ! sudo dnf list --installed | grep -q "^\<$package_name\>"; then
 		echo "installing $package_name..."
-		sleep .5
+		sleep 0.25
 		sudo dnf install "$package_name" -yq
 		echo "${GREEN}[INSTALLED]${RESTORE} - $package_name"
 	else
@@ -33,7 +33,7 @@ done
 for flatpak_name in ${FLATPAK_LIST[@]}; do
 	if ! flatpak list | grep -q $flatpak_name; then
 		echo "installing $flatpak_name..."
-		sleep .5
+		sleep 0.25
 		flatpak install "$flatpak_name" -y --noninteractive
 		echo "${GREEN}[INSTALLED]${RESTORE} - $flatpak_name"
 	else
