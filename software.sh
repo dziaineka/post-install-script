@@ -8,6 +8,9 @@ mapfile -t INSTALL_LIST < install-list.txt
 mapfile -t REMOVE_LIST < remove-list.txt
 mapfile -t FLATPAK_LIST < flatpak-list.txt
 
+echo "${RED}--- REMOVING PACKAGES ---${RESTORE}"
+echo
+
 for package_name in ${REMOVE_LIST[@]}; do
 	if ! sudo dnf list --installed | grep -q "^\<$package_name\>"; then
 		echo "${RED}[UNINSTALLED]${RESTORE} - $package_name"
@@ -19,6 +22,10 @@ for package_name in ${REMOVE_LIST[@]}; do
 	fi
 done
 
+echo
+echo "${GREEN}--- INSTALLING PACKAGES ---${RESTORE}"
+echo
+
 for package_name in ${INSTALL_LIST[@]}; do
 	if ! sudo dnf list --installed | grep -q "^\<$package_name\>"; then
 		echo "installing $package_name..."
@@ -29,6 +36,10 @@ for package_name in ${INSTALL_LIST[@]}; do
 		echo "${GREEN}[INSTALLED]${RESTORE} - $package_name"
 	fi
 done
+
+echo
+echo "${GREEN}--- INSTALLING FLATPAKS ---${RESTORE}"
+echo
 
 for flatpak_name in ${FLATPAK_LIST[@]}; do
 	if ! flatpak list | grep -q $flatpak_name; then
