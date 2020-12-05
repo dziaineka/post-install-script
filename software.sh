@@ -4,43 +4,9 @@ RESTORE=$(echo -en '\033[0m')
 RED=$(echo -en '\033[00;31m')
 GREEN=$(echo -en '\033[00;32m')
 
-INSTALL_LIST=(
-	zsh
-	libreoffice-writer
-	code
-	kate
-	htop
-)
-
-REMOVE_LIST=(
-	kwrite
-	kmail
-	kamoso
-	falkon
-	mediawriter
-	kolourpaint
-	kmines
-	kontact
-	krusader
-	konversation
-	kmahjongg
-	calligra-core
-	ktorrent
-	akregator
-	dragon
-	korganizer
-	kget
-	kaddressbook
-	juk
-	k3b
-	kpat
-)
-
-FLATPAK_LIST=(
-	com.spotify.Client
-	org.mozilla.Thunderbird
-	com.discordapp.Discord
-)
+mapfile -t INSTALL_LIST < install-list.txt
+mapfile -t REMOVE_LIST < remove-list.txt
+mapfile -t FLATPAK_LIST < flatpak-list.txt
 
 for package_name in ${REMOVE_LIST[@]}; do
 	if ! sudo dnf list --installed | grep -q "^\<$package_name\>"; then
