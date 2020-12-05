@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+RESTORE=$(echo -en '\033[0m')
+RED=$(echo -en '\033[00;31m')
+GREEN=$(echo -en '\033[00;32m')
+
 INSTALL_LIST=(
 	zsh
 	libreoffice-writer
@@ -46,12 +50,12 @@ sudo dnf check-update -yq
 
 for package_name in ${REMOVE_LIST[@]}; do
 	if ! sudo dnf list --installed | grep -q "^\<$package_name\>"; then
-		echo "[UNINSTALLED] - $package_name"
+		echo "${RED}[UNINSTALLED]${RESTORE} - $package_name"
 	else
 		echo "removing $package_name..."
 		sleep .5
 		sudo dnf remove "$package_name" -yq
-		echo [UNINSTALLED] - $package_name
+		echo "${RED}[UNINSTALLED]${RESTORE} - $package_name"
 	fi
 done
 
@@ -60,9 +64,9 @@ for package_name in ${INSTALL_LIST[@]}; do
 		echo "installing $package_name..."
 		sleep .5
 		sudo dnf install "$package_name" -yq
-		echo "[INSTALLED] - $package_name"
+		echo "${GREEN}[INSTALLED]${RESTORE} - $package_name"
 	else
-		echo "[INSTALLED] - $package_name"
+		echo "${GREEN}[INSTALLED]${RESTORE} - $package_name"
 	fi
 done
 
@@ -71,8 +75,8 @@ for flatpak_name in ${FLATPAK_LIST[@]}; do
 		echo "installing $flatpak_name..."
 		sleep .5
 		flatpak install "$flatpak_name" -y --noninteractive
-		echo "[INSTALLED] - $flatpak_name"
+		echo "${GREEN}[INSTALLED]${RESTORE} - $flatpak_name"
 	else
-		echo "[INSTALLED] - $flatpak_name"
+		echo "${GREEN}[INSTALLED]${RESTORE} - $flatpak_name"
 	fi
 done
