@@ -5,7 +5,7 @@ shell script for personal use, setting up fedora the way i like it.
 
 - add packages you want to install to `install-list.txt`
 - add packages you want to remove to `remove-list.txt`
-- add flatpaks you want to install to `flatpak-list.txt`.
+- add flatpaks you want to install to `flatpak-list.txt`
 
 ## Quick Start
 
