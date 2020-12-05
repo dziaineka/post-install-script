@@ -46,7 +46,7 @@ sudo dnf check-update -yq
 
 for package_name in ${REMOVE_LIST[@]}; do
 	if ! sudo dnf list --installed | grep -q "^\<$package_name\>"; then
-		echo "[ALREADY UNINSTALLED] - $package_name"
+		echo "[UNINSTALLED] - $package_name"
 	else
 		echo "removing $package_name..."
 		sleep .5
