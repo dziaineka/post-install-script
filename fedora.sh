@@ -18,6 +18,8 @@ sudo dnf install fontconfig-enhanced-defaults fontconfig-font-replacements -yq
 
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+./add-repositories.sh
+
 ./software.sh
 
 chsh -s /usr/bin/zsh
