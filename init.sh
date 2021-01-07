@@ -26,8 +26,3 @@ sudo systemctl disable NetworkManager-wait-online.service
 
 sudo dnf upgrade -y
 sudo dnf autoremove -y
-
-# run get-config script
-git clone https://github.com/fhek789/get-config.git
-cd get-config
-./init.sh
