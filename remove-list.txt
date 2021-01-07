@@ -2,3 +2,4 @@ mediawriter
 gnome-boxes
 gnome-maps
 libreoffice-impress
+totem
