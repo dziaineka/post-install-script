@@ -15,3 +15,5 @@ unzip
 p7zip
 p7zip-plugins
 unrar
+papirus-icon-theme
+fira-code-fonts
