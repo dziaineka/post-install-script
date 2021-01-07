@@ -17,3 +17,4 @@ p7zip-plugins
 unrar
 papirus-icon-theme
 fira-code-fonts
+git-credential-libsecret
