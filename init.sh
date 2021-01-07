@@ -23,8 +23,6 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 chsh -s /usr/bin/zsh
 
 sudo systemctl disable NetworkManager-wait-online.service
-sudo systemctl disable lvm2-monitor.service
-sudo systemctl disable ModemManager.service
 
 sudo dnf upgrade -y
 sudo dnf autoremove -y
