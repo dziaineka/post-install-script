@@ -21,3 +21,10 @@ git-credential-libsecret
 terminus-fonts-console
 terminus-fonts-grub2
 zlib-devel
+bzip2-devel
+readline-devel
+openssl-devel
+sqlite-devel
+libffi-devel
+sshfs
+docker-compose
