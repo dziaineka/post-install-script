@@ -18,3 +18,5 @@ unrar
 papirus-icon-theme
 fira-code-fonts
 git-credential-libsecret
+terminus-fonts-console
+terminus-fonts-grub2
